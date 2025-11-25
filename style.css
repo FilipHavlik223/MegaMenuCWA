@@ -239,7 +239,74 @@ body {
 }
 
 
+@media (max-width: 968px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        overflow-y: auto;
+        transition: left 0.3s;
+        gap: 0;
+    }
 
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 16px;
+    }
+
+    .megamenu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        margin: 0;
+        min-width: auto;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-item.mobile-active .megamenu {
+        max-height: 2000px;
+        margin-top: 8px;
+    }
+
+    .nav-item.mobile-active .arrow {
+        transform: rotate(180deg);
+    }
+
+    .megamenu-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .featured-section {
+        grid-column: span 1;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .nav-actions {
+        order: -1;
+    }
+}
 
 
 .content {
